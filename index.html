@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>13번 방</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="game" aria-label="13번 방 내부">
+      <img src="room-13.png" alt="낡은 모텔 방. 책상과 액자, 잠긴 문이 보인다.">
+      <button class="hotspot picture" data-action="picture" aria-label="액자 조사"></button>
+      <button class="hotspot drawer" data-action="drawer" aria-label="책상 서랍 조사"></button>
+      <button class="hotspot door" data-action="door" aria-label="문 조사"></button>
+      <p id="message" aria-live="polite">문이 잠겼다. 방 안을 조사해 탈출하자.</p>
+    </div>
+  </main>
+
+  <dialog id="lock">
+    <form method="dialog">
+      <h1>서랍 자물쇠</h1>
+      <label for="code">세 자리 암호</label>
+      <input id="code" inputmode="numeric" maxlength="3" autocomplete="off">
+      <div><button value="cancel">취소</button><button id="unlock" value="default">열기</button></div>
+    </form>
+  </dialog>
+
+  <script src="game.js"></script>
+</body>
+</html>
